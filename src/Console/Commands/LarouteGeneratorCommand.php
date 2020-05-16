@@ -78,8 +78,12 @@ class LarouteGeneratorCommand extends Command
             );
 
             $this->info("Created: {$filePath}");
+            
+            return 0;
         } catch (\Exception $e) {
             $this->error($e->getMessage());
+            
+            return 10;
         }
     }
 
